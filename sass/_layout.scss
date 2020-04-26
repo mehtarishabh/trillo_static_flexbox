@@ -3,13 +3,20 @@
     margin: 8rem auto;
     background-color: var(--color-grey-light-1);
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3);
+
+    min-height: 50rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        width: 100%;
+    }
 }
 
 .header {
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    background-color: var(--color-grey-light-2);
+    border-bottom: 1px solid var(--color-grey-light-2);
 
     display: flex;
     justify-content: space-between;
@@ -18,15 +25,55 @@
 
 .content {
     display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 }
 
 .sidebar {
     background-color: var(--color-grey-dark-1);
 
     flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
-    background-color: orangered;
     flex: 1;
+    
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    font-size: 1.4rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+}
+
+.description {
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+}
+
+.user-reviews {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
